@@ -49,6 +49,14 @@ cleaner abstraction
 if user sessions were considered (requires extending current webpack build configuration)
 * Styles lifted into a modular SCSS build that avoids duplication and repition
 
+## Features
+
+Snapshot                   |  Description
+:-------------------------:|:-------------------------:
+![Search for new pokemon](https://i.imgur.com/fQd2fJ0.png)  |  Search for new pokemon against the [PokéAPI](https://pokeapi.co/).
+![Save new pokemon to your favourites](https://i.imgur.com/5A4Nakc.png)  |  Save new pokemon into your favourites on the left.
+![Manage and revisit your favourites](https://i.imgur.com/03GpvXm.png)  |  Manage and revisit your favourites. [Fun translations API](https://funtranslations.com/api/shakespeare) allowing, pokemon will be shown with the Shakespearean translation of their description. 
+
 ## Known issues
 * `localStorage` is implemented as an sync with async ability proof of concept,
 however `localStorage` has no ability to namespace elements, if the local domain
