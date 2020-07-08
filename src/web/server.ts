@@ -2,7 +2,7 @@ import path from 'path'
 import express from 'express'
 
 import { fetchPokemonByName } from './services/pokemon'
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 6060
 
 const app = express()
 const api = express.Router()

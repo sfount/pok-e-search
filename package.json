@@ -9,6 +9,7 @@
     "dev:test": "jest --watch",
     "build:app": "parcel build src/app/index.html",
     "build:server": "NODE_ENV=production webpack",
+    "start": "node dist/index.js",
     "test": "jest"
   },
   "author": "Steven Fountain",
