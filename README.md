@@ -1,12 +1,15 @@
 # Pokésearch
 
-Simple web service to search for and favourite Pokémon.
+Simple web service to search for and save favourite Pokémon.
 
-## Core technologies:
+## Core technologies
+
 * Reactjs
 * Redux
 * TypeScript
 * TypeScript + Express backend
+
+![Favourite Pokemon](https://i.imgur.com/XT097eX.png "Favourite Pokémon")
 
 ## Getting up and running
 
@@ -32,7 +35,10 @@ npm run build:app && npm run build:server
 npm start
 ```
 
-## Proposed improvements with additional time:
+### Testing methodology
+[/test/README.md](/test/README.md)
+
+## Proposed improvements with additional time
 * Happy path end to end journey testing across both the frontend and the backend (using [Cypress](https://www.cypress.io/))
 * React router for managing internal Reactjs app state, allowing for deep linking and a
 cleaner abstraction
