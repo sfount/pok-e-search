@@ -1,0 +1,57 @@
+{
+  "name": "pokesearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:app": "parcel src/app/index.html",
+    "dev:server": "webpack --watch",
+    "dev:test": "jest --watch",
+    "build:app": "parcel build src/app/index.html",
+    "build:server": "NODE_ENV=production webpack",
+    "test": "jest"
+  },
+  "author": "Steven Fountain",
+  "jest": {
+    "projects": [
+      "src/app/jest.config.js",
+      "src/web/jest.config.js"
+    ]
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/classnames": "^2.2.10",
+    "@types/express": "^4.17.7",
+    "@types/fetch-mock": "^7.3.2",
+    "@types/jest": "^26.0.4",
+    "@types/nock": "^11.1.0",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-redux": "^7.1.9",
+    "@types/redux-mock-store": "^1.0.2",
+    "classnames": "^2.2.6",
+    "fetch-mock": "^9.10.3",
+    "jest": "^26.1.0",
+    "nock": "^13.0.2",
+    "node-fetch": "^2.6.0",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "redux-mock-store": "^1.5.4",
+    "redux-thunk": "^2.3.0",
+    "sass": "^1.26.9",
+    "ts-jest": "^26.1.1",
+    "typescript": "^3.9.6",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^1.7.2"
+  },
+  "dependencies": {
+    "axios": "^0.18.1",
+    "axios-cache-adapter": "^2.5.0",
+    "express": "^4.17.1"
+  }
+}

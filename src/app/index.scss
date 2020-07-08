@@ -1,0 +1,238 @@
+.someclass {
+  background-color: red;
+}
+
+// note: SCSS ended up being rushed to meet delivery; there are a lot of oppertunities to
+// move common attributes into variables and helper mixins
+$favourites-width: 60px;
+$container-width: 550px;
+
+ html, body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  background-color: #f3f2f1;
+  padding: 0;
+  margin: 0;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.container {
+  max-width: $container-width;
+  background-color: white;
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+@media(min-width: $container-width + 20px) {
+  .container {
+    margin-top: 2em;
+    border: 1px solid #b1b3b6;
+  }
+}
+
+@media(max-width: $container-width + 20px) {
+  .container {
+    height: 100%;
+  }
+}
+
+.left {
+  max-width: $favourites-width;
+  width: $favourites-width;
+  border-right: 1px solid #b1b3b6;
+}
+
+.right {
+  width: 100%;
+  margin-left: 1em;
+  margin-right: 1em;
+  min-height: 335px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.favourites {
+  display: flex;
+  flex-direction: column;
+}
+
+.icon {
+  padding-top: 10px;
+  text-align: center;
+}
+
+.favourite {
+  padding-right: 3px;
+  border-bottom: 1px solid lightgrey;
+  min-height: 47px;
+}
+
+.hint {
+  color: #626a6e;
+  font-weight: 400;
+  display: block;
+}
+
+.page-heading {
+  margin-top: 1.9em;
+  text-transform: capitalize;
+}
+
+.selected {
+  padding-right: none;
+  border-right: 3px solid	#1d70b8;
+}
+
+.search-container {
+  padding-right: 3px;
+  min-height: 47px;
+  text-align: center;
+  margin-top: 15px;
+  padding-bottom: 10px;
+}
+
+.favourite:first-child {
+  border-top: 1px solid lightgrey;
+}
+
+.favourite img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}
+.heart {
+  width: 24px;
+  height: 24px;
+  fill: 	#d4351c	;
+  stroke: none;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+.search {
+  fill: gray;
+  stroke: none;
+}
+
+input.search {
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #b1b3b6;
+  margin-top: 5px;
+}
+
+.button {
+  padding: 8px;
+  background-color:	#1d70b8;
+  border: 1px solid #b1b3b6;
+  border: none;
+  color: white;
+  margin-bottom: 2em;
+}
+
+.details-img {
+  width: 96px;
+  height: 96px;
+  min-width: 96px;
+  min-height: 96px;
+  display: block;
+}
+
+.overview {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.favourite-button {
+  padding: 10px;
+  display: flex;
+  background-color: #1d70b8;
+  color: white;
+  margin-bottom: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.favourite-button:hover {
+  background-color: #5694ca;
+}
+
+.favourite-button svg {
+  fill: white;
+}
+
+.favourite-button span {
+  margin-left: 5px;
+  line-height: 1.3;
+}
+
+.favourite-button.favourited {
+  background-color: #317b52;
+}
+
+.favourite-button.favourited:hover {
+  background-color: #317b5299;
+}
+
+.search-container:hover {
+  background-color: #f3f2f1;
+  cursor: pointer;
+}
+
+.favourite:hover {
+  background-color: #f3f2f1;
+  cursor: pointer;
+}
+
+.favourite.in-progress {
+  background-color: #f3f2f1;
+  cursor: initial;
+}
+
+.button:disabled {
+  background-color: #5694ca;
+}
+
+.error-hint {
+  color: #d4351c;
+}
+
+input.search.errored {
+  border: 1px solid #d4351c;
+}
+
+input:focus, textarea:focus, select:focus{
+  outline: none;
+}
+
+.info {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
+  border: 1px solid #5694ca;
+}
+
+.info div svg {
+  fill: #5694ca;
+}
+
+.info div {
+  display: flex;
+  align-items: center;
+}
+
+.info div span {
+  margin-left: 5px;
+}
